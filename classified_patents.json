@@ -1,0 +1,646 @@
+[
+  {
+    "application_no": "202511087359 A",
+    "title": "TALENT ACQUISITION AND EMPLOYEE RECRUITMENT SYSTEM",
+    "international_classification": "G06Q0010105300, G06Q0010063100, G16H0040670000, G05B0015020000, G06Q0050200000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Mohit Prakram 2)Dr. Sachin Kumar Singh 3)Dr. Sourabh Kumar 4)Dr. Navneet Khurana",
+    "abstract": "A talent acquisition and employee recruitment system, comprising user-interface embedded within a computing unit linked with the system to be used by concerned person in order to access a portal to open the concerned authority’s server to enter the details related to the various parameters required for a particular job role, a data fetching module linked with the portal that process the multiple profiles of applicants from the server and compares the parameters fed by the applicants, a processing unit configured with the server that shortlists the job profiles fulfilling the requirements for job, a transmission module linked with processing unit to get the contact details of the shortlisted applicants, wherein upon fetching the processing unit transmits a confirmation notification over a computing unit of respective shortlisted applicants. Ref. Figure 1 Dated this …………... Day of September 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 11 No. of Claims : 2 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104600",
+    "ipc_codes": [
+      "G06Q0010105300",
+      "G06Q0010063100",
+      "G16H0040670000",
+      "G05B0015020000",
+      "G06Q0050200000"
+    ],
+    "patent_type": "Software"
+  },
+  {
+    "application_no": "202511087360 A",
+    "title": "INSURANCE PROCESSING SYSTEM",
+    "international_classification": "G06Q0020320000, H04N0021462000, H04N0021478200, G06Q0020180000, A47J0031440000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Gaurav Sethi 2)Dr. (Ar.) Atul Kumar Singla 3)Dr. Rajeev Sobti 4)Navdeep Singh",
+    "abstract": "An insurance processing system, comprising of a user-interface installed in a computing unit for enabling a user to access a portal of concerned authority’s server, a processing unit linked with server for processing user-selection, which based on the user-selection, the processing unit evaluates an amount to be paid by the user, which is displayed on the computing unit, and a payment interface installed in the computing unit for allowing the user to make the evaluated amount via multiple E (Electronic)-payment wallets, which upon successful payment, the processing unit transmits a purchase notification along with details of the insurance, which is displayed on the computing unit. Ref Figure 1 Dated this …………... Day of September 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 11 No. of Claims : 4 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104601",
+    "ipc_codes": [
+      "G06Q0020320000",
+      "H04N0021462000",
+      "H04N0021478200",
+      "G06Q0020180000",
+      "A47J0031440000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511087361 A",
+    "title": "CAR RENTAL MANAGEMENT SYSTEM",
+    "international_classification": "G06Q0030064500, G06Q0010020000, G06Q0020320000, G06Q0020400000, G06Q0030060100",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Amit Dutt 2)Dr. Alok Jain 3)Dr. Vishal Sharma 4)Gazal Sharma",
+    "abstract": "A car rental management system, comprising a user-interface installed within a computing unit of a user and associated with system for allowing user to access a portal of a concerned authority’s server to select a vehicle desire to rent along with time duration, a processing unit associated with a sever linked with portal for processing and generating a request which is sent to a computing unit of an admin wirelessly linked with processing unit and upon acceptance of requires, the processing unit displays an amount on user’s computing unit that is to be paid by user, and a payment interface linked with portal for enabling user to pay evaluated amount through various E (Electronic)-payment method and upon successful payment, the processing unit books user-selected vehicle on server and transmits a booking confirmation notification along with status of booking and allocated driver on user’s computing unit. Ref. Figure 1 Dated this …………... Day of September 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 12 No. of Claims : 4 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104602",
+    "ipc_codes": [
+      "G06Q0030064500",
+      "G06Q0010020000",
+      "G06Q0020320000",
+      "G06Q0020400000",
+      "G06Q0030060100"
+    ],
+    "patent_type": "Software"
+  },
+  {
+    "application_no": "202511087362 A",
+    "title": "MICRO-ALGAE BASED BIOFUEL COMPOSITION AND METHOD FOR PREPARATION THEREOF",
+    "international_classification": "C10L0001020000, C12M0001000000, C11C0003000000, C12P0007649000, C11C0003100000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Suresh Mani 2)Dr. Sawinder Kaur Vermani 3)Dr. Shailesh Kumar Singh 4)Dr. Balraj Kumar",
+    "abstract": "The present invention relates to a micro-algae based biofuel composition comprises of : microalgae biodiesel and diesel in ratio of 1:9. A method for preparation of the micro-algae based biofuel composition comprises of following steps: a) titrating feedstock oil with standard base solution of potassium hydroxide and ethanol in order to obtain fatty acid-free feed stock oil, b) placing the obtained oil at bottom of a container and supplying methanol from top of the container for allowing trans- esterification between the oil and methanol in order to obtain biodiesel, and c) transferring the obtained biodiesel to a washing content in order to obtain pure biodiesel, followed by mixing the obtained pure biodiesel with the diesel in the 1:9 ratio and stirring using a magnetic stirrer for a time duration of 15-25 minutes in order to obtain the biofuel. Ref. Figure 1 Dated this …………... Day of August 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 12 No. of Claims : 3 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104603",
+    "ipc_codes": [
+      "C10L0001020000",
+      "C12M0001000000",
+      "C11C0003000000",
+      "C12P0007649000",
+      "C11C0003100000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511087363 A",
+    "title": "EMPLOYEE RECRUITMENT ASSISTIVE SYSTEM",
+    "international_classification": "G06Q0010105300, G06Q0010063100, G06Q0010060000, G06N0003020000, G06Q0010105000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr.H Pal Thethi 2)Manish Kumar 3)Gaurav Gupta 4)Dr. Ankur Bahl",
+    "abstract": "An employee recruitment assistive system, comprises of a user-interface installed in a computing unit associated with the system for allowing a concerned person to access a portal of concerned authorities’ server, the portal is accessed by the person for providing information regarding various skill sets for recruiting employees, a processing unit linked with the server for fetching applications of multiple applicants from the server and comparing the applications with the skill sets required, based on the comparisons the processing unit shortlists various applicants having the required skill sets, a communication module linked with the processing unit, the processing activates the communication module for notifying the shortlisted applicants regarding their selection and their interview schedule that displayed on a computing unit of the applicants, and a communication gateway is integrated within the server for allowing a two-way communication between the computing unit, server and portal. Ref Figure 1 Dated this …………... Day of September 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 12 No. of Claims : 4 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104604",
+    "ipc_codes": [
+      "G06Q0010105300",
+      "G06Q0010063100",
+      "G06Q0010060000",
+      "G06N0003020000",
+      "G06Q0010105000"
+    ],
+    "patent_type": "Software"
+  },
+  {
+    "application_no": "202511087364 A",
+    "title": "SHOPPING MANAGEMENT SYSTEM",
+    "international_classification": "G06Q0030060100, G06Q0030060000, G06Q0030020000, G06Q0010087000, G06N0003045000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Kailash Chandra Juglan 2)Dr. Rajesh Verma 3)Dr. Neeta Raj Sharma 4)Dr. Pavitar Parkash Singh",
+    "abstract": "A shopping management system, comprising a computing unit installed with a user-interface which is accessed by the user for selecting types of commodities along with the date of delivery for the commodities, a processing unit linked with the server for detecting a shop selling the user-defined commodities, a purchase module linked with the server for selecting the required commodities, a payment module installed with the computing unit for make payment of evaluated amount, a communication gateway is integrated inside the server for allowing a two-way communication between the computing unit, server and portal. Ref Figure 1 Dated this …………... Day of September 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 11 No. of Claims : 3 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104605",
+    "ipc_codes": [
+      "G06Q0030060100",
+      "G06Q0030060000",
+      "G06Q0030020000",
+      "G06Q0010087000",
+      "G06N0003045000"
+    ],
+    "patent_type": "Software"
+  },
+  {
+    "application_no": "202511087365 A",
+    "title": "NAVIGATION AND RANGING ASSISTIVE SYSTEM",
+    "international_classification": "G01S0013900000, G06V0020580000, G06V0020560000, G01S0013860000, B60R0011040000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Megha Mehta 2)Sanjay Sood 3)Sumit Mittu 4)Meghna Gupta",
+    "abstract": "A navigation and ranging assistive system, comprising a body to be mapped on a water vehicle, an image capturing module installed on the body to capture multiple images of a water surface in the proximity of the vehicle, a microcontroller integrated with the system to process the images, a ISAR (Inverse Synthetic Aperture Radar) protocols installed within the microcontroller to determine the type of other water vehicles positioned within the vicinity of the vehicle, a transmission module associated with the microcontroller to transmit a suitable path over a navigation panel mounted on a crew cabin fabricated on the vehicle and an alerting module configured with the microcontroller to send a warning notification over the navigation panel. Ref. Figure 1 Dated this …………... Day of September 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 13 No. of Claims : 5 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104606",
+    "ipc_codes": [
+      "G01S0013900000",
+      "G06V0020580000",
+      "G06V0020560000",
+      "G01S0013860000",
+      "B60R0011040000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511087366 A",
+    "title": "DATA SEGREGATION AND STORING SYSTEM",
+    "international_classification": "G06F0016280000, H04L0009140000, H05B0041292000, G08B0025010000, G06F0011140000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Kulwinder Singh 2)Rishi Chopra 3)Preeti Khurana 4)Dr. Vishal Sarin",
+    "abstract": "The present invention relates to a data segregation and storing system, comprising a user interface installed within a computing unit associated with the system for enabling a user to access a portal, wherein the portal allows the user to upload personal details over a concerned authority’s server linked with the portal and a data segregation module linked with the server for categorizing the uploaded details, wherein based on the categorized details, a processing unit associated with the module stores the data into a virtual memory packet embedded within the server in order to allow proper segregation of the uploaded data. Ref. Figure 1 Dated this …………... Day of August 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 10 No. of Claims : 4 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104607",
+    "ipc_codes": [
+      "G06F0016280000",
+      "H04L0009140000",
+      "H05B0041292000",
+      "G08B0025010000",
+      "G06F0011140000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511087367 A",
+    "title": "EMPLOYEE MANAGEMENT SYSTEM",
+    "international_classification": "H04L0009400000, A61B0005000000, H01M0010420000, G06F0003060000, G06Q0010083300",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Lalit Bhalla 2)Dr.Varun Kumar 3)Dr. Namita Kaur 4)Dr. Sunaina Ahuja",
+    "abstract": "An employee management system, comprising of a computing unit installed with a user-interface that allows user to enter login credentials, a processing unit associated with the server and linked with portal for comparing user defined credentials with multiple user-profiles, an administration module linked with the portal that allows concerned person to fetch and change the updated details, a communication gateway is integrated inside the server for allowing a two-way communication between computing unit, server and portal. Ref Figure 1 Dated this …………... Day of September 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 10 No. of Claims : 3 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104608",
+    "ipc_codes": [
+      "H04L0009400000",
+      "A61B0005000000",
+      "H01M0010420000",
+      "G06F0003060000",
+      "G06Q0010083300"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511087928 A",
+    "title": "VEHICLE EMISSION DIAGNOSIS AND CONTROL SYSTEM",
+    "international_classification": "G06N0020000000, H04W0004021000, F02D0041140000, G01M0015100000, H04W0004380000",
+    "applicant": "1)Chandigarh University Address of Applicant :Chandigarh University, National Highway 05, Chandigarh-Ludhiana Highway, Mohali, Punjab -140413, India. Mohali Punjab India",
+    "inventor": "1)Bebesh Tripathy 2)Anupam Jena",
+    "abstract": "The present invention relates to a Vehicle Emission Diagnosis and Control System that integrates real-time IoT-based sensors, artificial intelligence-driven predictive analytics and adaptive engine control. The system continuously monitors exhaust pollutants through a multi-sensor array and cross-references the collected data with engine telemetry. The invention proactively prevents emission violations by dynamically optimizing combustion parameters to minimize emissions at the source. A machine learning engine predicts component degradation before regulatory limits are breached, while a blockchain-secured ledger ensures tamper-proof and auditable compliance records. The system further integrates GPS-based geo-fencing to enforce low-emission zone protocols and traffic-aware routing to reduce congestion- related pollution, compatible with internal combustion engines, hybrid vehicles, and future powertrains, and can be implemented both as an OEM solution and as an aftermarket retrofit. Key innovations include closed-loop adaptive emission control, predictive maintenance alerts, and smart city integration, resulting in reduced violations, improved fuel efficiency and automated regulatory reporting. No. of Pages : 14 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104609",
+    "ipc_codes": [
+      "G06N0020000000",
+      "H04W0004021000",
+      "F02D0041140000",
+      "G01M0015100000",
+      "H04W0004380000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511088072 A",
+    "title": "Flexible Eco-friendly L-CHIT/MgO Bioelectrode for Electrochemically Vitamin D Detection",
+    "international_classification": "G01N0027480000, G01N0027327000, A61K0036600000, G01N0027300000, A61K0036738000",
+    "applicant": "1)BANARAS HINDU UNIVERSITY Address of Applicant :VARANASI- 221005, UTTAR PRADESH, INDIA VARANASI Uttar Pradesh India",
+    "inventor": "1)Jay Singh 2)Sarita Shaktawat",
+    "abstract": "This invention relates to a Flexible, Eco-friendly L-CHIT/MgO Bioelectrode for Electrochemically producing Vitamin D. Firstly synthesized MgO NPs were synthesized by utilizing rose petals of Rosa Chinensis through hydrothermal treatment with maintain pH-12. Synthesized MgO NPs were validated by optoelectronic characterization techniques such as XRD, UV, FTIR, Raman, XPS, TEM, and SEM. synthesized MgO NPs were utilized in the modification of sustainable, flexible, biodegradable working fabrication by using Ficus religiosa (peepal tree) leaf-optimized layers, lamina net (L), on deposition of chitosan (CHIT). Fabricated a final flexible, sustainable, biodegradable, bioelectrode by utilizing leaf lamina net cut into fine 2 × 1 cm pieces, on deposited with chitosan to fill the lamina net area for the flow of electrons on the surface. Still, optimized layers L-CHIT have limited current density, leading to MgO NPs deposition, enhancing redox peak current density during cyclic voltammetry (CV) and differential pulse voltammetry (DPV). By employing the CV and DPV measurement in phosphate buffer saline (PBS) containing 5 mM [Fe(CN)6]3 /4- (0.9 % NaCl, pH 7.0), the successful fabrication of the layers L-CHIT/MgO NPs/EDC-NHS Ab Vit-D/BSA bioelectrode was confirmed. A ubiquitous potential range from -1.0 V to 1.0 V at constant scan rate (50 mV.sec-1) and -0.5 V to 1.0 V has been utilized for CV and DPV, respectively. The final, fabricated, optimized layers of L-CHIT/MgO NPs bioelectrode were utilized in the voltametric detection of Vitamin D2 and D3. Fabricated biosensor optimized layers L-CHIT/MgO NPs/EDC-NHS Ab Vit-D/BSA bioelectrode was detected in the linear range of concentration (1 nM- 120 nM) and (1 nM- 200 nM) of Vit-D2 and D3, respectively, and validated by spike and blood serum sample studies. Results are satisfactory and promote an eco-friendly approach for the electrochemical detection of Vitamin D2 and D3, respectively. No. of Pages : 33 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104610",
+    "ipc_codes": [
+      "G01N0027480000",
+      "G01N0027327000",
+      "A61K0036600000",
+      "G01N0027300000",
+      "A61K0036738000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511087584 A",
+    "title": "A COMPOSITION AND METHOD FOR ELECTROMAGNETIC INTERFERENCE SHIELDING USING A P(VDF-TRFE)/REDUCED GRAPHENE OXIDE NANOCOMPOSITE",
+    "international_classification": "H05K0009000000, C08F0214220000, C08K0003040000, H01L0023552000, H01B0001240000",
+    "applicant": "1)GRAPHIC ERA DEEMED TO BE UNIVERSITY Address of Applicant :566/6, Bell Road, Society Area, Clement Town, Dehradun - 248002, Uttarakhand, India Dehradun Uttarakhand India",
+    "inventor": "1)Vikas Rathi",
+    "abstract": "The present invention relates to a nanocomposite for electromagnetic interference shielding in electronic devices comprising a ferroelectric polymer matrix [10] of poly(vinylidene fluoride-co-trifluoroethylene) (P(VDF-TrFE)) and a conductive filler [20] of reduced graphene oxide (rGo) at weight percentages of about 5 wt%, 10 wt%, or 15 wt%, along with a residual solvent [30] of N,N-dimethylformamide (DMF) used in a solution casting process. Uniform dispersion of rGo particles forms interconnected conductive channels, yielding a flexible composite film [40] with a continuous microstructure verified by scanning electron microscopy. The invention further encompasses a detailed fabrication method ensuring homogeneous dispersion and controlled thermal treatment for optimal EMI shielding performance. No. of Pages : 13 No. of Claims : 3 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104611",
+    "ipc_codes": [
+      "H05K0009000000",
+      "C08F0214220000",
+      "C08K0003040000",
+      "H01L0023552000",
+      "H01B0001240000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511087757 A",
+    "title": "APPARATUS AND METHOD FOR INDOOR SIMULATION OF SOLAR HEAT FOR PAVEMENT THERMAL RESPONSE",
+    "international_classification": "G01N0017000000, C09D0005330000, G01M0099000000, G01N0003600000, G01N0033420000",
+    "applicant": "1)MALAVIYA NATIONAL INSTITUTE OF TECHNOLOGY JAIPUR Address of Applicant :MNIT JAIPUR, JHALANA GRAM, JAIPUR- 302017, RAJASTHAN, INDIA Jaipur Rajasthan India",
+    "inventor": "1)Dr. Prakash Somani 2)Dr. Arun Gaur 3)Mr. Amit Sain 4)Ghanshyam Balotiya",
+    "abstract": "This invention introduces a compact indoor heat simulation apparatus designed to replicate solar-induced thermal effects for evaluating temperature-induced stresses in pavement materials under controlled conditions. The setup features a 500W incandescent bulb mounted over a truncated conical chamber lined internally with aluminum wrap to enhance infrared reflection. Based on solar radiation data for Rajasthan, India, the design condenses six hours of peak sunlight into a two-hour test window by reducing the irradiated area to 2286 cm². The configuration delivers infrared energy equivalent to peak summer exposure, enabling accelerated simulation of thermal loading. RTD Pt100 sensors embedded in the test specimen interface with a digital meter for accurate temperature monitoring. This system facilitates the assessment of temperature gradients and stress development in pavement layers, aiding in the design of thermally resilient road materials. The invention offers a reliable, repeatable, and scalable solution for simulating real-world thermal conditions in laboratory environments. No. of Pages : 18 No. of Claims : 4 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104612",
+    "ipc_codes": [
+      "G01N0017000000",
+      "C09D0005330000",
+      "G01M0099000000",
+      "G01N0003600000",
+      "G01N0033420000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089565 A",
+    "title": "A HYBRID ATOMIZER FOR SHEAR-THINNING FLUIDS",
+    "international_classification": "B05B1/34, B05B7/04",
+    "applicant": "1)Indian Institute of Technology Kanpur Address of Applicant :Dean, Research and Development Office, 2nd Floor, New Faculty Annexe Building, IIT Kanpur, Kalyanpur, Kanpur - 208016, Uttar Pradesh, India. Kanpur Uttar Pradesh India",
+    "inventor": "1)SAURABH, Aditya 2)KABIRAJ, Lipika 3)GUPTA, Priyanshu 4)KURUMANGHAT, Vivek",
+    "abstract": "A hybrid atomizer (100) for shear-thinning fluids can include a top chamber (110), a nozzle chamber (120), a spacer plate (130), and a bottom chamber (150). The top chamber (110) includes a fluid inlet (112) for introducing at least one shear-thinning fluid at a predefined pressure. The nozzle chamber (120) includes a swirl chamber (134) to impart a swirling motion to the at least one shear-thinning fluid before exiting the at least one shear-thinning fluid through a fluid exit orifice (136). The bottom chamber (150) includes one or more tangential air inlets (152) for air injection to impart a swirling motion to the air. An interaction zone (170) receives the at least one shear-thinning fluid and the air for a controlled atomization. An exit orifice (180) positioned below the interaction zone (170) allows the atomized at least one shear- thinning fluid to exit out of the hybrid atomizer (100). No. of Pages : 23 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104613",
+    "ipc_codes": [
+      "B05B1/34",
+      "B05B7/04"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089832 A",
+    "title": "SYSTEM AND METHOD FOR FLOATING WETLAND",
+    "international_classification": "C02F0003320000, C02F0001280000, C02F0103000000, C02F0009000000, B09C0001100000",
+    "applicant": "1)Nims University Rajasthan, Jaipur Address of Applicant :Dr. BS Tomar City, National Highway, Jaipur- Delhi, Rajasthan 303121 Jaipur Rajasthan India",
+    "inventor": "1)B Gyani Priyanka Patnaik",
+    "abstract": "A modular floating wetland system (100) for in-situ water remediation that removes multiple contaminants by combining native aquatic plants with nano-engineered biochar. The system is made up of buoyant interlocking platforms (101) that create scalable treatment zones. Each of these zones contains planting cells (101a) that are enhanced by nano-biochar (103) made from agricultural residues and a growth medium (102). Phytoextraction, rhizodegradation, and high-capacity adsorption of pollutants are all made possible by the dual-function root zone matrix (105) established by indigenous aquatic plants (104) with extensive root systems. The system offers the possibility of nutrient recovery through biomass harvesting and efficiently eliminates excess nutrients, heavy metals, and microplastics. Adaptability to various waterbodies and pollutant loads is ensured by a modular and scalable design (107) with anchoring and stability mechanism (108). The innovation offers a sustainable, economical, and environmentally beneficial method of restoring water quality. No. of Pages : 20 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104614",
+    "ipc_codes": [
+      "C02F0003320000",
+      "C02F0001280000",
+      "C02F0103000000",
+      "C02F0009000000",
+      "B09C0001100000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089833 A",
+    "title": "MAGNETIC INTERLOCKING MORTARLESS BUILDING SYSTEM",
+    "international_classification": "E04B0002020000, E04B0001610000, E04B0002180000, E04C0001390000, E04B0002400000",
+    "applicant": "1)Nims University Rajasthan, Jaipur Address of Applicant :Dr. BS Tomar City, National Highway, Jaipur- Delhi, Rajasthan 303121 Jaipur Rajasthan India",
+    "inventor": "1)Mr. Nitesh Vilas Gopnarayan",
+    "abstract": "The invention relates to a magnetic interlocking mortarless building system 100 comprising modular brick units made from materials such as concrete, clay, fly ash, plastic composites, or lightweight aggregates. Each brick unit 101 includes permanent magnets 102 embedded in multiple faces, with precise polar orientation to ensure magnetic attraction and self-alignment between adjacent units. To enhance structural stability, the units also feature 103 mechanical interlocking elements, including protrusions 103a and corresponding recesses 103b. The brick units further include 104 integrated internal channels, 104a vertical channels for inserting reinforcement bars, 105 and 104b horizontal channels for routing utility lines 106. After assembly, 105 rebar is inserted into the vertical channels and grouted 107 with high-strength, non-shrink concrete, forming reinforced columns within the wall structure. The configuration of elements 101 to 107 enables rapid, mortarless, and reusable construction with enhanced alignment, structural strength, and embedded service integration. No. of Pages : 27 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104615",
+    "ipc_codes": [
+      "E04B0002020000",
+      "E04B0001610000",
+      "E04B0002180000",
+      "E04C0001390000",
+      "E04B0002400000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089834 A",
+    "title": "HERBAL TRANSDERMAL DELIVERY SYSTEM",
+    "international_classification": "A61K0036288000, A61K0009700000, A61Q0019080000, A61K0009000000, A61K0036906600",
+    "applicant": "1)Nims University Rajasthan, Jaipur Address of Applicant :Dr. BS Tomar City, National Highway, Jaipur- Delhi, Rajasthan 303121 Email:- patents.office@nimsuniversity.org Jaipur Rajasthan India",
+    "inventor": "1)Dr. Hemant Bareth 2)Dr. Bhumi Chaturvedi 3)Sandli Jain 4)Dr. Sandeep Tripathi 5)Dr. Dushyant Singh Chauhan 6)Dr. Sunil Sharma",
+    "abstract": "The invention provides a transdermal polyherbal detoxification patch (100) and a method for its preparation. The patch (100) comprises a standardized herbal extract blend (101) including ginger, turmeric, green tea, dandelion, and burdock, incorporated into a transdermal delivery matrix (102) composed of a hydrogel base, lipid- based nanocarriers, and cyclodextrin complexes. The formulation further includes a permeation enhancer (103), an antioxidant stabilizer system (104) containing vitamin E, vitamin C, and rosemary extract, a biocompatible adhesive layer (105) with a gradient adhesion profile, a moisture-resistant backing layer (106), and a removable release liner (107). The patch (100) enables controlled and sustained transdermal delivery of phytoconstituents for systemic detoxification and skin rejuvenation. A method for manufacturing the patch in reducing toxin levels and improving skin health are also provided. No. of Pages : 21 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104616",
+    "ipc_codes": [
+      "A61K0036288000",
+      "A61K0009700000",
+      "A61Q0019080000",
+      "A61K0009000000",
+      "A61K0036906600"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089778 A",
+    "title": "AI INTEGRATED SYSTEM FOR PREDICTING DRUG SAFETY THROUGH REVIEW ANALYSIS AND ADAPTIVE LEARNING",
+    "international_classification": "G06N0003080000, G16H0070400000, G06N0003044000, G06N0020000000, G06F0040284000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Arnav Kumar 2)Dr. Anshu Sharma",
+    "abstract": "The present invention discloses a system (100) for predicting pharmaceutical drug safety using AI-based natural language processing and adaptive learning. The system comprises a data collection and preprocessing module (102) for extracting and standardizing user reviews and feedback, a machine learning model module (104) utilizing RNN or LSTM models for safety prediction, a safety prediction and alert engine (106) for classifying drugs into multiple safety categories and generating real- time alerts, and a feedback and adaptive learning mechanism (108) for refining predictions through new reviews and IoT-enabled monitoring data. The system (100) enhances post-market surveillance, reduces reliance on conventional pharmacovigilance methods, and provides real-time, scalable, and reliable drug safety monitoring. FIG.1 Dated this……Day of SEPTEMBER, 2025 Dr.Monica Gulati Registrar Lovely Professional University No. of Pages : 13 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104617",
+    "ipc_codes": [
+      "G06N0003080000",
+      "G16H0070400000",
+      "G06N0003044000",
+      "G06N0020000000",
+      "G06F0040284000"
+    ],
+    "patent_type": "Software"
+  },
+  {
+    "application_no": "202511089782 A",
+    "title": "SMART ADAPTIVE MUG SYSTEM FEATURING BEVERAGE RECOGNITION AND AUTONOMOUS TEMPERATURE OPTIMIZATION",
+    "international_classification": "A47G0019220000, G06F0001200000, A47G0023020000, G06Q0050200000, H01M0010625000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr.Devender Kumar 2)Lakshya raj singh",
+    "abstract": "A smart adaptive mug system (100) is disclosed, comprising a multi-sensor matrix (102), an embedded AI processor (104), and a temperature regulation subsystem (106). The system autonomously identifies beverage types using optical, thermal, and conductivity sensors, classifies them against a beverage-temperature database, and regulates temperature via Peltier elements and thermistors. Connectivity modules (108) enable real-time monitoring, preference learning, and smartphone integration. Safety subsystems include spill detection, overheating protection, and low-battery shutdown. The mug incorporates aerospace-grade aluminum, a ceramic nanocomposite lining, and vacuum insulation for extended durability and stability. The AI processor (104) refines performance over time, adapting to individual preferences. This system provides precise beverage temperature management within ±0.5 °C, ensuring safety, flavor preservation, and user convenience. The invention addresses shortcomings of manual control mugs and represents a scalable, energy-efficient advancement in intelligent beverageware. FIG. 1 Dated this……Day of SEPTEMBER, 2025 Dr.Monica Gulati Registrar Lovely Professional University No. of Pages : 15 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104618",
+    "ipc_codes": [
+      "A47G0019220000",
+      "G06F0001200000",
+      "A47G0023020000",
+      "G06Q0050200000",
+      "H01M0010625000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089786 A",
+    "title": "LOAD-SENSITIVE POWER-ASSIST CUT-OFF SYSTEM FOR HYBRID (HUMAN + BATTERY) ELECTRIC BICYCLES",
+    "international_classification": "B60L50/20, B60L15/30, B62M6/45, B62M6/50, B60L50/20, B60L15/30, B62M6/45, B62M6/50",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi Jalandhar GT Road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Rahul Sharma",
+    "abstract": "A load-sensitive power-assist cut-off system (100) for hybrid electric bicycles enhances safety and efficiency by automatically inhibiting motor operation based on detected load. The system utilizes one or more load sensors to measure the mass supported by the bicycle and a controller that computes the total mass. If the computed mass exceeds a predetermined threshold, the controller prevents the motor from engaging or operating, ensuring the bicycle is only used under intended load conditions. This proactive intervention prevents potential damage to the drive system and improves overall operational safety. Dated this …………... Day ofAugust 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 9 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104619",
+    "ipc_codes": [
+      "B60L50/20",
+      "B60L15/30",
+      "B62M6/45",
+      "B62M6/50",
+      "B60L50/20",
+      "B60L15/30",
+      "B62M6/45",
+      "B62M6/50"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511087379 A",
+    "title": "HYBRID VARIANT OF COMPRESSION DEVICE FOR SEQUENTIAL PRESSURE GENERATION IN MULTI-CHAMBER INFLATABLE GARMENT",
+    "international_classification": "A61H9/00, F04B49/00",
+    "applicant": "1)SHASHI B GOGIA Address of Applicant :28/31 OLD RAJINDER NAGAR, NEW DELHI 110060, INDIA NEW DELHI Delhi India 2)ARUN REKHA GOGIA",
+    "inventor": "1)SHASHI B GOGIA",
+    "abstract": "A compression device is provided for delivering controlled, sequential air pressure across one or more chambers 104A-D of an inflatable garment 102 that encircles 5 a limb. The pressure flow is sequential, using low pressure, which gradually increases with the filling of the higher chambers. The higher chambers are filled without emptying the lower chambers to create a slow upward and gradual rise in the encircling garment pressure which is sustained for a few minutes for efficient and safe therapeutic effect. The device comprises a compressed 10 air source 106, one or more electronically actuated valves 108A-D, a pressure sensor 110, and a control unit 112. The chambers include a first chamber 104A positioned distally and a second chamber 104B positioned proximally on the limb. The air source delivers pressurized air via piped connections, regulated by valves located near each chamber outlet. FIG. 1 No. of Pages : 53 No. of Claims : 12 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104620",
+    "ipc_codes": [
+      "A61H9/00",
+      "F04B49/00"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089929 A",
+    "title": "A CRITICAL CARE ALERT PAGER FOR TIMELY UPDATES TO CONCERNED FAMILY MEMBERS",
+    "international_classification": "A61B0005000000, G16H0080000000, G16H0040670000, G16H0040200000, A61B0005145000",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. SAUMYA DAS 2)Dr. CHANDANA MAJI",
+    "abstract": "The invention discloses “a critical care alert pager for timely updates to concerned family members” (100), designed to enhance communication between hospitals and patient families during critical care. The system integrates a wireless communication device (10) with the hospital’s critical care unit (20) and monitoring system (50) to provide immediate notifications regarding patient status. Equipped with a vibration and sound mechanism (30) and a display screen (40), the pager delivers real-time alerts to family members, ensuring timely updates while reducing the need for frequent staff interaction. This innovation improves transparency, minimizes delays in communication, and alleviates disruptions to critical care staff. No. of Pages : 21 No. of Claims : 7 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104621",
+    "ipc_codes": [
+      "A61B0005000000",
+      "G16H0080000000",
+      "G16H0040670000",
+      "G16H0040200000",
+      "A61B0005145000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089930 A",
+    "title": "A WEARABLE DEVICE FOR CONTINUOUS MONITORING OF CHEMOTHERAPY RESPONSE",
+    "international_classification": "A61B5/00, G16H50/30, G16H40/67",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. SALAHUDDIN",
+    "abstract": "The present invention discloses a wearable device (100) for continuous monitoring of chemotherapy response. The device integrates biosensors (10) to measure physiological and biochemical parameters, a data processing unit (20) with predictive algorithms, and a wireless communication module (30) for secure transmission. A patient interface (40) displays health trends and provides alerts. The ergonomic housing (50) ensures patient comfort, while the rechargeable battery (60) enables prolonged use. The invention enhances oncology care by providing real-time monitoring, remote clinician access, and predictive insights for personalized chemotherapy management. No. of Pages : 15 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104622",
+    "ipc_codes": [
+      "A61B5/00",
+      "G16H50/30",
+      "G16H40/67"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089932 A",
+    "title": "A DEVICE FOR NON-INVASIVE TRANSDERMAL DRUG DELIVERY USING MICROCURRENT",
+    "international_classification": "A61M37/00, A61N1/04, A61N1/32",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. CHANDANA MAJI 2)Dr. SAUMYA DAS",
+    "abstract": "The present invention discloses a device (100) for non-invasive transdermal drug delivery utilizing microcurrent technology. The device comprises a housing unit (10), a drug reservoir (20), a microcurrent generator (30), electrode pads (40), a control interface (50), and a power supply unit (60). By delivering controlled microampere- level currents, the system transiently enhances skin permeability, enabling efficient drug transport without tissue damage. The device incorporates safety monitoring (70) and optional wireless communication (80), offering a patient-friendly, portable solution for precise and effective therapeutic drug administration. No. of Pages : 16 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104623",
+    "ipc_codes": [
+      "A61M37/00",
+      "A61N1/04",
+      "A61N1/32"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089835 A",
+    "title": "BIO-SENSE PAD",
+    "international_classification": "A61F13/47, A61F13/472, G01N33/74, G01N27/327, G16H40/67",
+    "applicant": "1)Nims University Rajasthan, Jaipur Address of Applicant :Dr. BS Tomar City, National Highway, Jaipur- Delhi, Rajasthan Jaipur Rajasthan India",
+    "inventor": "1)Gayatri Pandey 2)Vaibhav Tamrakar",
+    "abstract": "A portable system (100) and method (200) for real-time, non-invasive measurement of female hormonal activity through menstrual blood. The system (100) has a sanitary pad (101) with an integrated disposable biochemical test strip (101a) that collects menstrual blood and measures estrogen and progesterone with hormone- specific reagents. The test strip (101a) is microfluidic or paper-based platform providing a signal that correlates with hormone concentration. A reader device (102) accepts the strip and digests hormonal content through biosensors (103) having a sensor interface (102a), detection modules (102b), analog front-end (102c), microcontroller (102d), display (102e), wireless module (102f), and rechargeable power source (102g) with interface (102h). Hormonal data is sent to a smartphone app (105), where it is processed, stored, and analysed for hormonal patterns employing machine learning to offer menstrual phase detection, fertility prediction, and health advice. Method (200) describes the user process and signal processing for continuous hormonal monitoring. No. of Pages : 26 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104624",
+    "ipc_codes": [
+      "A61F13/47",
+      "A61F13/472",
+      "G01N33/74",
+      "G01N27/327",
+      "G16H40/67"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089836 A",
+    "title": "SYSTEM FOR DETECTION AND REGULATION OF PHYSIOLOGICAL RESPONSES",
+    "international_classification": "A61B5/01, A61B5/16, G06N20/00, G01J5/00",
+    "applicant": "1)Nims University Rajasthan, Jaipur Address of Applicant :Dr. BS Tomar City, National Highway, Jaipur- Delhi, Rajasthan 303121 Email:- patents.office@nimsuniversity.org Jaipur Rajasthan India",
+    "inventor": "1)Wanshika Singh",
+    "abstract": "The invention provides a thermal imaging push-tense monitor (TIPTM) system (100) for real-time detection and management of physiological stress using non-invasive facial thermography. The system includes a thermal imaging sensor (101), an image processing unit (102) for enhancing and segmenting facial regions, and a stress pattern recognition module (103) that analyses thermal data using machine learning algorithms. Upon detecting stress, a biofeedback and exercise guidance module (104) activates customized corrective exercises, displayed through a display unit (105). A real-time feedback loop (111) monitors thermal changes during intervention. The system also comprises a data storage and analysis unit (106), communication interface (107), power management unit (108), user input module (109), audio output module (110) housing (112), and calibration module (113). The invention offers automated, adaptive, and user-specific stress detection and intervention. No. of Pages : 24 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104625",
+    "ipc_codes": [
+      "A61B5/01",
+      "A61B5/16",
+      "G06N20/00",
+      "G01J5/00"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089837 A",
+    "title": "A BIOCONTROL FORMULATION FOR CONTROLLING PLANT-PARASITES",
+    "international_classification": "A61K0036810000, A01N0065000000, A61K0036230000, A61K0036610000, A61K0036270000",
+    "applicant": "1)Nims University Rajasthan, Jaipur Address of Applicant :Dr. BS Tomar City, National Highway, Jaipur- Delhi, Rajasthan 303121 Email:- patents.office@nimsuniversity.org Jaipur Rajasthan India",
+    "inventor": "1)Rashmi Vats 2)Dr. Amrendra Kumar",
+    "abstract": "An eco-friendly biocontrol formulation comprising aqueous extracts of Datura stramonium, Lantana camara, Syzygium aromaticum, Pimpinella anisum, Azadirachta indica, Allium sativum, Tagetes erecta, Calotropis procera, and Cymbopogon citratus for the management of plant-parasitic nematodes, particularly Meloidogyne incognita. Further, the invention provides a novel method for the preparation of the biocontrol formulation is prepared by extracting bioactive compounds from those plant leaves. The extract exhibits strong nematicidal activity by inhibiting egg hatching and inducing juvenile mortality, attributed to phytochemicals such as alkaloids, flavonoids, terpenoids, and phenolics. The formulation is non-toxic to non-target organisms, and suitable for organic farming, offering a sustainable and cost-effective alternative to synthetic nematicides. The invention addresses growing concerns over pesticide resistance, environmental contamination, and soil health degradation. No. of Pages : 26 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104626",
+    "ipc_codes": [
+      "A61K0036810000",
+      "A01N0065000000",
+      "A61K0036230000",
+      "A61K0036610000",
+      "A61K0036270000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089787 A",
+    "title": "A PORTABLE THERMAL POULTRY UNIT TO PREVENT CHICKS FROM LOW TEMPERATURES",
+    "international_classification": "A01K31/20, A01K45/00",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr Vikas Sharma",
+    "abstract": "The present invention disclosesa portable thermal poultry unit comprising a poultry box with insulated walls, bottom heating chamber, araised resting floor, air ventilators for proper airflow, heating coil for thermal regulation, thermostatic valve for automatic temperature control, power cable for electrical connectivity, solar panel with battery and inverter for uninterrupted power supply, structural frame/supports or mounting hooks (if required for hanging or elevation) and driving wheels. This device combines both monitoring and control unit to check the variation in inside temperature of poultry unit and to control it automatically as per required or set temperature. Protecting chicks from extremely low temperatures remains a major challenge, as cold temperature stress can lead to high mortality rates and hinder the growth. This advanced poultry unit greatly increases chick survival rates and supports healthier biological growth in severe winter conditions. Fig. Dated This ………...day of September, 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 11 No. of Claims : 7 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104627",
+    "ipc_codes": [
+      "A01K31/20",
+      "A01K45/00"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089788 A",
+    "title": "UV-C STERILIZING DOCK",
+    "international_classification": "A61L0002100000, A61L0009200000, F24F0008220000, A61L0002240000, A61L0002080000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Prabhjot Singh Jassal 2)Annaparthi Sahil",
+    "abstract": "The present invention discloses a UV-C sterilizing dock designed for rapid disinfection of surgical instruments. The device comprises a stainless-steel chamber with a reflective interior and a removable perforated tray to ensure uniform UV-C exposure. High-intensity UV-C light sources (254–280 nm) are positioned above and below the tray, effectively inactivating bacteria, viruses, and fungi by disrupting microbial DNA and RNA. A safety interlock mechanism automatically disables the lamps upon opening the lid, preventing accidental radiation exposure. The control panel includes a timer and indicator system for easy operation. The compact and portable design allows deployment in operating rooms, emergency departments, and field hospitals where autoclaves are impractical. The invention provides a fast, safe, and chemical-free sterilization solution suitable for both routine and emergency use, ensuring immediate availability of sterile instruments. [Figure 1 is selected] Dated This ………...day of September, 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 12 No. of Claims : 8 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104628",
+    "ipc_codes": [
+      "A61L0002100000",
+      "A61L0009200000",
+      "F24F0008220000",
+      "A61L0002240000",
+      "A61L0002080000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089789 A",
+    "title": "MODULAR PROTECTIVE INJURY SHIELD WITH ADJUSTABLE MECHANISM",
+    "international_classification": "A41D0013110000, A41D0013050000, A61F0013000000, A41D0013080000, A41D0013000000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Vivek Kesharwani 2)Dr. Sudhanshu Dogra 3)Dr. Amit Kumar Thakur 4)Anil B Ghubade",
+    "abstract": "The present invention relates to a wearable protective device(100) designed to shield skin injuries such as burns, surgical wounds, and cuts from friction, pressure, dust, insects, and moisture. The device(100) comprises an ergonomically(101) curved upper protective cover and a lower support base(102), both made of lightweight, skin- friendly, semi-rigid materials. Ventilation openings with mesh(104) provide continuous airflow, preventing heat buildup and moisture accumulation, while a soft rubber or medical-grade silicone lining ensures a gentle, irritation-free seal against the skin. An adjustable elastic strap system(103) allows easy fitting, removal, and repositioning, adapting to various body types. The device(100) offers non-contact protection, promoting faster and safer wound healing without restricting user movement. It is reusable and washable, providing long-term comfort and hygiene. This protective solution overcomes the limitations of conventional bandages and dressings, enhancing daily comfort during recovery. [To be published along with figure 1] Dated this Day of SEPTEMBER, 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 13 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104629",
+    "ipc_codes": [
+      "A41D0013110000",
+      "A41D0013050000",
+      "A61F0013000000",
+      "A41D0013080000",
+      "A41D0013000000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089933 A",
+    "title": "A SMART DEVICE FOR DRUG STABILITY TESTING UNDER VARIABLE TEMPERATURES",
+    "international_classification": "A61B0005000000, H04M0003510000, G05B0019418000, G16H0050200000, F21V0023040000",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. AVIJIT MAZUMDER 2)Dr. SWARUPANJALI PADHI",
+    "abstract": "The present invention discloses a smart device (100) for drug stability testing under variable temperatures, comprising a programmable chamber (10) with heating (14), cooling (15), and humidity regulation modules (16). Integrated sensors (20, 22) continuously monitor environmental conditions, transmitting data to a microcontroller- based control unit (30) with feedback mechanism (32). A wireless module (40) and mobile application (42) provide remote monitoring, while a cloud-enabled analytics system (50) with AI (52) generates predictive insights. The device ensures accurate, real-time, and regulatory-compliant stability testing in pharmaceutical applications. No. of Pages : 15 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104630",
+    "ipc_codes": [
+      "A61B0005000000",
+      "H04M0003510000",
+      "G05B0019418000",
+      "G16H0050200000",
+      "F21V0023040000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089934 A",
+    "title": "A PORTABLE DEVICE FOR PHARMACEUTICAL TABLET HARDNESS MONITORING",
+    "international_classification": "A61K0009200000, H02J0007000000, G01N0003400000, A61B0005000000, G01R0035000000",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. SAUMYA DAS 2)Dr. CHANDANA MAJI",
+    "abstract": "The present invention discloses a portable device (100) for pharmaceutical tablet hardness monitoring comprising a housing (10), a load cell (20), a microcontroller unit (30), and a digital display (40). The device further includes a communication module (50), rechargeable battery (62), and calibration unit (70). It provides real-time, accurate hardness measurements, data storage, and wireless communication for enhanced quality control. Compact and user-friendly, the device supports pharmaceutical production, research, and clinical applications by enabling portable, efficient, and reliable monitoring of tablet hardness in diverse environments. No. of Pages : 15 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104631",
+    "ipc_codes": [
+      "A61K0009200000",
+      "H02J0007000000",
+      "G01N0003400000",
+      "A61B0005000000",
+      "G01R0035000000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089935 A",
+    "title": "A DEVICE FOR AUTOMATED CAPSULE COATING WITH PRECISION SPRAYING",
+    "international_classification": "A61K9/16, B05B16/20, B05B15/00, B05B13/02",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. ANJNA RANI 2)Dr. SWARUPANJALI PADHI",
+    "abstract": "The invention discloses an automated device (100) for capsule coating with precision spraying, comprising atomizing nozzles (20), a capsule holder unit (30), monitoring sensors (40), a programmable control module (50), and a drying chamber (60). The system ensures uniform coating thickness, reduced material wastage, and real-time monitoring. Feedback-based adjustments optimize spray parameters, while controlled drying prevents coating defects. The device improves efficiency, energy utilization, and reproducibility, making it highly suitable for pharmaceutical and nutraceutical manufacturing requiring consistent, high-quality capsule coatings. No. of Pages : 15 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104632",
+    "ipc_codes": [
+      "A61K9/16",
+      "B05B16/20",
+      "B05B15/00",
+      "B05B13/02"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089936 A",
+    "title": "AN AUTOMATED DEVICE FOR SAFE DRUG REPACKAGING IN HOSPITALS",
+    "international_classification": "G16H0040200000, G16H0020130000, A61J0001140000, B65B0055020000, G06Q0010080000",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. AVIJIT MAZUMDER 2)Dr. MONIKA",
+    "abstract": "The present invention discloses an automated device (100) for safe drug repackaging in hospitals. The device comprises a sterile chamber (101), robotic manipulator (102), drug input hopper (103), unit-dose dispensing system (104), labeling and barcode verification module (105), sterilization unit (106), and control system (107). It ensures sterile, accurate, and traceable repackaging of pharmaceuticals while minimizing human intervention. The device supports patient-specific unit-dose preparation, integrates with hospital pharmacy systems, and enhances efficiency, safety, and compliance in hospital drug management. No. of Pages : 15 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104633",
+    "ipc_codes": [
+      "G16H0040200000",
+      "G16H0020130000",
+      "A61J0001140000",
+      "B65B0055020000",
+      "G06Q0010080000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089937 A",
+    "title": "A DEVICE FOR REAL-TIME MONITORING OF DRUG DISSOLUTION RATE",
+    "international_classification": "G01N0033150000, G01N0013000000, B01L0007000000, C12M0001340000, H04L0065101600",
+    "applicant": "1)NOIDA INSTITUTE OF ENGINEERING AND TECHNOLOGY (PHARMACY INSTITUTE) Address of Applicant :19, Knowledge Park-II, Institutional Area, Greater Noida – 201306, Uttar Pradesh, India. Uttar Pradesh India",
+    "inventor": "1)Dr. AVIJIT MAZUMDER 2)Dr. SWARUPANJALI PADHI",
+    "abstract": "The present invention discloses a device (100) for real-time monitoring of drug dissolution rate. The device comprises a dissolution chamber (101), optical sensors (102), turbidity detector (103), and data processing unit (104) for generating continuous dissolution profiles. Integrated temperature and pH sensors (106), stirrer (107), and heating element (108) maintain controlled conditions. Wireless communication (105) enables remote monitoring. The device provides accurate, non-destructive, and regulatory-compliant dissolution testing for pharmaceutical formulations, improving efficiency, reducing manual errors, and supporting quality-by-design approaches in drug development and manufacturing. No. of Pages : 15 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104634",
+    "ipc_codes": [
+      "G01N0033150000",
+      "G01N0013000000",
+      "B01L0007000000",
+      "C12M0001340000",
+      "H04L0065101600"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089790 A",
+    "title": "A SMART GROUND WATER RECHARGE SYSTEM AND INSTALLATION METHOD THEREOF",
+    "international_classification": "E03F0001000000, E03B0003340000, E02D0031020000, A01G0025060000, A01G0025000000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Nitin Madan Changade 2)Dr. Vikas Sharma",
+    "abstract": "The present invention discloses a smart ground water recharge system with perforated helical coil tank, a vertical inlet pipe, moisture sensors, control valve and sediment filter chamber. The underground helical coil tank fabricated for durable, corrosion resistant polymer or composite material and its helical shape maximizes the contact surface area than the vertical shaft or infiltration pits. The micro perforations distributed along the coils surface are for uniform water seepage. The soil moisture sensors embedded in surrounding soil are to monitor saturation level. This invention addresses the problem of inefficient ground water recharge and excessive surface runoff during rainfall, especially in urban and semi arid regions. Hence it ensures controlled, sensor based water infiltration, prevent water logging, enhance deep aquifer recharge and minimizes the evaporation losses. Fig.1 Dated This ………...day of August, 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 11 No. of Claims : 8 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104635",
+    "ipc_codes": [
+      "E03F0001000000",
+      "E03B0003340000",
+      "E02D0031020000",
+      "A01G0025060000",
+      "A01G0025000000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511089791 A",
+    "title": "An Aerodynamic Vehicle Rooftop Attachment with Integrated Drainage Functionality",
+    "international_classification": "G06F0030150000, B60R0009055000, B60R0013000000, B60Q0001500000, E03F0005040000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr Vikas Sharma",
+    "abstract": "The present invention belongs to automobile engineering and vehicle design, a novel roof attachment designed to effectively protect luggage from rainwater while travelling. This system comprises a slidable, water-resistant roof cover, telescopic side walls, sliding channels to facilitate roof movement during luggage loading and unloading, an aerodynamic front strip to reduce wind pressure on the roof cover, drainage conduits for safe disposal of rainwater onto the road, and a locking mechanism. The present system is a readymade, portable attachment for car roofs. One common problem for the people travelling through car is protecting their luggage placed on the car roof specially in rainy season. Therefore, this invention solves this problem and it can securely protect the luggage and ensure it remains dry during travel in rainy conditions. Fig. Dated This ………...day of September, 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 12 No. of Claims : 7 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104636",
+    "ipc_codes": [
+      "G06F0030150000",
+      "B60R0009055000",
+      "B60R0013000000",
+      "B60Q0001500000",
+      "E03F0005040000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511089792 A",
+    "title": "HYBRID NANOMATERIAL COATING FOR ANTI-ICING AND DICING IN AIRCRAFT WING",
+    "international_classification": "C09K0003180000, C09D0005000000, C09D0007610000, C09D0005160000, C08K0003220000",
+    "applicant": "1)Lovely Professional University Address of Applicant :Lovely Professional University, Delhi-Jalandhar GT road Phagwara- 144411. Phagwara Punjab India",
+    "inventor": "1)Dr. Rahul Kumar",
+    "abstract": "The present invention relates to a hydrophobic photothermal coating(105) (HPC) designed for aircraft anti-icing applications. The HPC comprises carbon nanotubes (CNTs) and copper oxide (CuO) nanoparticles(102) uniformly dispersed in a modified epoxy resin(101) matrix. The coating(105) is applied via a simple spraying method onto 2024 aluminum alloy substrates(104), forming a robust micro-nano hierarchical structure that achieves a static water contact angle of approximately 115° to 135°. This structure reduces ice adhesion, delays ice formation, and facilitates rapid water roll-off. Additionally, the coating(105) exhibits photothermal properties that convert solar energy into heat, enabling passive self-deicing under sunlight without external power input. The invention offers a low-energy, cost-effective, and environmentally sustainable solution that improves aerodynamic performance, structural integrity, and flight safety by minimizing ice accumulation on critical aircraft surfaces(106). [To be published along with figure 1] Dated this Day of SEPTEMBER, 2025 Dr. Monica Gulati Registrar Lovely Professional University No. of Pages : 15 No. of Claims : 6 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104637",
+    "ipc_codes": [
+      "C09K0003180000",
+      "C09D0005000000",
+      "C09D0007610000",
+      "C09D0005160000",
+      "C08K0003220000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511088846 A",
+    "title": "Endophyte-assisted green synthesis of chalcogen-based nanoparticle-coated bioactive bandage for microbicidal utility",
+    "international_classification": "C12N0001140000, A61P0031040000, C01B0019000000, A61P0035000000, C12R0001645000",
+    "applicant": "1)Thapar Institute of Engineering and Technology Address of Applicant :P.O. Box No. 32, Bhadson Road, Patiala, Punjab, Pin- 147004, India Patiala Punjab India",
+    "inventor": "1)N Tejo Prakash 2)Priyankar Dey 3)Ranjana Prakash 4)Anmol",
+    "abstract": "The present invention provides endophyte-assisted green synthesis of chalcogen-based nanoparticle-coated bioactive bandage for microbicidal utility. The endophyte is isolated from the plant oleander and is cultured on a potato dextrose agar media, supplemented with ampicillin antibiotics. The fungal strain is subsequently transferred to a potato dextrose broth medium. The mycelia are isolated using a filtration technique and the exopolysaccharide is extracted using ethanol precipitation method. A selenite solution with sodium selenite is used as precursor salt to synthesis selenium nanoparticles, and selenium nanoparticles comprises particle size between 13.7 to 43.7 nm, the selenium nanoparticles are capped with exopolysaccharide using a chemical reduction approach. The synthesized selenium nanoparticles are further coated with cotton bandage and exhibits strong anti-infection properties against both gram-negative and gram-positive bacterial strains. Apart from the anti-bacterial activities, the invention demonstrates potent anti-oxidant, anti-inflammatory, anti-cancer and anti-fungal properties. No. of Pages : 78 No. of Claims : 9 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104638",
+    "ipc_codes": [
+      "C12N0001140000",
+      "A61P0031040000",
+      "C01B0019000000",
+      "A61P0035000000",
+      "C12R0001645000"
+    ],
+    "patent_type": "Non-Software"
+  },
+  {
+    "application_no": "202511090552 A",
+    "title": "FOOD STORAGE AND NUTRITIONAL MANAGEMENT SYSTEM",
+    "international_classification": "G16H0020600000, H04W0012060000, G16H0015000000, G16H0080000000, A45C0011200000",
+    "applicant": "1)Shree Guru Gobind Singh Tricentenary University Address of Applicant :Budhera, Gurugram-Badli Road, Gurugram-122505, Haryana, India. Gurugram Haryana India",
+    "inventor": "1)Dr. Deepanshi Saxena 2)Dr. Priyanka Gupta 3)Dr. Neha Sharma 4)Dr. Alok Singh 5)Dr. Nandini Sharma",
+    "abstract": "A food storage and nutritional management system, comprising of a hollow body 101 installed with multiple extendable plates 102 for segregating the body 101 into a plurality of compartments for placing different food items, a pair of sliding rails 105 to extend outwardly from the body 101, enabling convenient access for a child to consume food directly from the plates 102 during mealtime, an authentication module comprising a fingerprint scanner 104 to ensure secure and personalized access to food compartments, multiple colorimetric chemical sensors for detecting essential nutrients in food, and a set of weight sensors for detecting pre- and post-meal food weight, the microcontroller analyzes consumption data and shares reports on the computing unit for personalized feedback and alerts on under-consumption, a VOC sensor for detecting food freshness. No. of Pages : 22 No. of Claims : 10 The Patent Office Journal No. 43/2025 Dated 24/10/2025 104639",
+    "ipc_codes": [
+      "G16H0020600000",
+      "H04W0012060000",
+      "G16H0015000000",
+      "G16H0080000000",
+      "A45C0011200000"
+    ],
+    "patent_type": "Hybrid"
+  },
+  {
+    "application_no": "202511090553 A",
+    "title": "IONIC LIQUID-MODIFIED REDUCED GRAPHENE OXIDE AND MAGNESIUM OXIDE NANOCOMPOSITE AND METHOD FOR SYNTHESIS THEREOF",
+    "international_classification": "G01N0027327000, B82Y0030000000, B01J0020200000, B01J0037040000, B01J0021100000",
+    "applicant": "1)Shree Guru Gobind Singh Tricentenary University Address of Applicant :Budhera, Gurugram-Badli Road, Gurugram-122505, Haryana, India. Gurugram Haryana India",
+    "inventor": "1)Dr. Chandra Mouli Pandey 2)Mohd Jamshaiya Raza",
+    "abstract": "An ionic liquid-modified reduced graphene oxide and magnesium oxide nanocomposite (IL/MgO-rGO) comprises MgO nanoparticles supported on reduced graphene oxide (rGO) with at least two ionic liquids, where the rGO:MgO ratio ranges from 1:5 to 1:15. The synthesis involves sonicating GO and MgO in deionized water to form dispersions, then mixing and reducing GO with 2.0 M L-ascorbic acid at 80–100 °C for 3–4 hours. The resulting rGO-MgO nanohybrid is washed, dried, calcinated, and then redispersed, stirred with ionic liquids and KOH, and refluxed at 60–100 °C to yield IL/MgO-rGO, followed by purification. For biosensor fabrication, cellulose filter paper is stabilized with Tween-80, then dipped in a PEDOT: PSS-based IL/MgO-rGO dispersion prepared by stirring and sonicating. The paper is dried at 60–80 °C, and the dipping/drying process is repeated four times to enhance stability, conductivity, and mechanical strength, resulting in a flexible, non- enzymatic electrochemical biosensor. No. of Pages : 27 No. of Claims : 10",
+    "ipc_codes": [
+      "G01N0027327000",
+      "B82Y0030000000",
+      "B01J0020200000",
+      "B01J0037040000",
+      "B01J0021100000"
+    ],
+    "patent_type": "Non-Software"
+  }
+]
