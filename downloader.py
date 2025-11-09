@@ -1,32 +1,38 @@
 import os
 import json
-import shutil
-import time
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.os_manager import ChromeType
+from datetime import datetime
 
 # Constants
 BASE_URL = 'https://search.ipindia.gov.in/IPOJournal/Journal/Patent'
 DOWNLOAD_DIR = 'raw_pdfs'
 HISTORY_FILE = 'download_history.json'
-BASELINE_SERIAL = '44/2025'  # Format: week_number/year
+
+# --- YOUR BASELINE ---
+# We will not download anything *before* this date.
+# Set to '44/2025' which corresponds to 31/10/2025
+BASELINE_SERIAL = '44/2025'
+
+# --- NO SELENIUM NEEDED ---
 
 # Ensure download directory exists
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-# Load download history
+# Load download history (with safety check)
 if os.path.exists(HISTORY_FILE):
-    with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
-        download_history = json.load(f)
+    try:
+        with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
+            download_history = json.load(f)
+            # Ensure it's a list, not some other JSON type
+            if not isinstance(download_history, list):
+                print(f"Warning: History file '{HISTORY_FILE}' did not contain a list. Resetting.")
+                download_history = []
+    except json.JSONDecodeError:
+        # This happens if the file is empty or corrupted
+        print(f"Warning: History file '{HISTORY_FILE}' was empty or corrupted. Resetting.")
+        download_history = []
 else:
     download_history = []
 
@@ -70,87 +76,20 @@ def compare_serials(serial1, serial2):
         else:
             return 0
 
-# Set up Selenium with headless Chromium
-print("Setting up Chromium browser...")
-
-# Set TMPDIR environment variable for Snap environments
-os.environ['TMPDIR'] = os.getcwd()
-print(f"Set TMPDIR to: {os.environ['TMPDIR']}")
-
-# Try to find Chromium binary in common locations
-chromium_paths = [
-    shutil.which('chromium'),
-    shutil.which('chromium-browser'),
-    '/usr/bin/chromium',
-    '/usr/bin/chromium-browser',
-    '/snap/bin/chromium',
-]
-
-chromium_binary = None
-for path in chromium_paths:
-    if path and os.path.exists(path):
-        chromium_binary = path
-        print(f"Found Chromium at: {chromium_binary}")
-        break
-
-chrome_options = Options()
-if chromium_binary:
-    chrome_options.binary_location = chromium_binary
-else:
-    print("Warning: Chromium binary not found in common locations.")
-    print("Attempting to use default Chromium installation...")
-
-# Essential arguments for headless mode and Snap/Linux compatibility
-chrome_options.add_argument('--headless=new')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument('--disable-gpu')
-chrome_options.add_argument('--remote-debugging-port=9222')
-chrome_options.add_argument('--disable-software-rasterizer')
-chrome_options.add_argument('--window-size=1920,1080')
-
-# Create a user data directory to avoid permission issues with Snap
-user_data_dir = os.path.join(os.getcwd(), 'chromium_user_data')
-os.makedirs(user_data_dir, exist_ok=True)
-chrome_options.add_argument(f'--user-data-dir={user_data_dir}')
-
-# Use ChromeDriverManager to automatically set up the driver for Chromium
-print("Setting up ChromeDriver for Chromium...")
-service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
-driver = webdriver.Chrome(service=service, options=chrome_options)
+# --- THIS IS THE NEW, FAST WAY ---
+print(f"Fetching {BASE_URL} with 'requests'...")
+# Add a User-Agent header to disguise our script as a browser
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+}
 
 try:
-    # Navigate to the webpage
-    print(f"Navigating to: {BASE_URL}")
-    driver.get(BASE_URL)
+    # Get the raw HTML
+    response = requests.get(BASE_URL, headers=headers)
+    response.raise_for_status()
     
-    # Wait explicitly for the actual content (Part I link) to be loaded and visible
-    print("Waiting for page content to load (looking for 'Part I' link)...")
-    wait = WebDriverWait(driver, 30)
-    try:
-        wait.until(EC.visibility_of_element_located((By.PARTIAL_LINK_TEXT, 'Part I')))
-        print("Content loaded successfully! Found visible 'Part I' link.")
-    except Exception as e:
-        print(f"Could not find visible 'Part I' link, trying alternative wait conditions...")
-        try:
-            wait.until(EC.visibility_of_element_located((By.PARTIAL_LINK_TEXT, 'Part-I')))
-            print("Found visible 'Part-I' link.")
-        except:
-             # Final fallback to table wait
-            try:
-                wait.until(EC.presence_of_element_located((By.TAG_NAME, 'table')))
-                print("Table found, but links may not be loaded yet.")
-            except:
-                 print("Could not find table either.")
-
-    
-    # Add a small delay to ensure all JavaScript has finished executing
-    time.sleep(2)
-    print("Additional 2 second delay to ensure all content is fully rendered...")
-    
-    # Get the page source after JavaScript has rendered the content
-    page_source = driver.page_source
-    soup = BeautifulSoup(page_source, 'html.parser')
+    # Parse the HTML with BeautifulSoup
+    soup = BeautifulSoup(response.content, 'html.parser')
     
     # Find the table containing the journals
     table = soup.find('table')
@@ -167,22 +106,17 @@ try:
         if len(cols) < 2:
             continue
         
-        # Try to find the serial number (format: week/year) in any column
+        # Try to find the serial number
         journal_serial = None
-        for col in cols:
-            text = col.text.strip()
+        # Column 1 (index 1) is "Journal No."
+        if len(cols) > 1:
+            text = cols[1].text.strip()
             if parse_serial(text):
                 journal_serial = text
-                break
-        
-        # If not found, try column 1 (Date of Publication) as fallback
-        if not journal_serial and len(cols) > 1:
-            journal_serial = cols[1].text.strip()
-        
-        # Parse the serial number
-        if not parse_serial(journal_serial):
-            # print(f"Warning: Could not parse serial number from row. Skipping.")
-            continue
+
+        if not journal_serial:
+            # print("Warning: Could not find a valid serial in row. Skipping.")
+            continue # Could not find a valid serial, skip row
         
         print(f"Processing journal: {journal_serial}")
         
@@ -192,7 +126,6 @@ try:
             print(f"Reached baseline serial ({BASELINE_SERIAL}). Journal {journal_serial} is older. Stopping.")
             break
         
-        # Use the serial number as the journal identifier
         journal_no = journal_serial
         
         # If Journal No. is already in download_history, CONTINUE (skip)
@@ -200,29 +133,22 @@ try:
             print(f"Journal No. {journal_no} already downloaded. Skipping.")
             continue
         
-        # Find download forms for Part I and Part II
-        download_col = cols[-1]
+        # Find download forms
+        download_col = cols[-1]  # Last column should be "Download"
         download_forms = download_col.find_all('form')
-        
-        if not download_forms:
-             for i, col in enumerate(cols):
-                forms = col.find_all('form')
-                if forms:
-                    download_forms.extend(forms)
         
         print(f"  Found {len(download_forms)} total form(s)")
         
         part_i_filename = None
         part_ii_filename = None
         
-        # --- NEW STRICT MATCHING LOOP START ---
+        # --- STRICT MATCHING LOOP ---
         for form in download_forms:
             button = form.find('button')
             if not button:
                 continue
             
             # Clean the text: join multiple spaces, strip whitespace, convert to lower case
-            # This turns "Part   IV " into "part iv"
             text = button.get_text(" ", strip=True).lower()
             
             filename_input = form.find('input', {'type': 'hidden', 'name': 'FileName'})
@@ -230,21 +156,15 @@ try:
                 continue
             filename_value = filename_input.get('value', '')
             
-            print(f"  Checking form button: '{text}'")
-
-            # STRICT Exact matching to avoid "part iv" matching "part i"
+            # STRICT Exact matching
             if text == 'part i' or text == 'part 1':
                 part_i_filename = filename_value
                 print(f"  ✓ EXACT MATCH: Part I found.")
             elif text == 'part ii' or text == 'part 2':
                 part_ii_filename = filename_value
                 print(f"  ✓ EXACT MATCH: Part II found.")
-        # --- NEW STRICT MATCHING LOOP END ---
         
-        if not part_i_filename and not part_ii_filename:
-            print(f"  ✗ Warning: Could not find Part I or Part II forms.")
-        
-        # Download Part I and Part II PDFs using POST requests
+        # --- Download Logic (remains the same) ---
         downloaded_parts = []
         POST_URL = 'https://search.ipindia.gov.in/IPOJournal/Journal/ViewJournal'
         
@@ -252,11 +172,15 @@ try:
             try:
                 print(f"Downloading Part I for Journal No. {journal_no}...")
                 pdf_response = requests.post(
-                    POST_URL, data={'FileName': part_i_filename}, timeout=300, stream=True
+                    POST_URL, 
+                    data={'FileName': part_i_filename}, 
+                    timeout=300, # 5-minute timeout for large files
+                    stream=True,
+                    headers=headers # Pass headers for the POST request too
                 )
                 pdf_response.raise_for_status()
                 
-                # Fix filename by replacing slash with underscore
+                # Sanitize filename (replace '/' with '_')
                 safe_journal_no = journal_no.replace('/', '_')
                 pdf_filename = f"{safe_journal_no}_Part_I.pdf"
                 pdf_path = os.path.join(DOWNLOAD_DIR, pdf_filename)
@@ -265,6 +189,7 @@ try:
                     for chunk in pdf_response.iter_content(chunk_size=8192):
                         if chunk:
                             pdf_file.write(chunk)
+                
                 downloaded_parts.append("Part I")
                 print(f"  ✓ Downloaded {pdf_filename}")
             except Exception as e:
@@ -274,11 +199,15 @@ try:
             try:
                 print(f"Downloading Part II for Journal No. {journal_no}...")
                 pdf_response = requests.post(
-                    POST_URL, data={'FileName': part_ii_filename}, timeout=300, stream=True
+                    POST_URL, 
+                    data={'FileName': part_ii_filename}, 
+                    timeout=300, # 5-minute timeout for large files
+                    stream=True,
+                    headers=headers # Pass headers for the POST request too
                 )
                 pdf_response.raise_for_status()
                 
-                # Fix filename by replacing slash with underscore
+                # Sanitize filename (replace '/' with '_')
                 safe_journal_no = journal_no.replace('/', '_')
                 pdf_filename = f"{safe_journal_no}_Part_II.pdf"
                 pdf_path = os.path.join(DOWNLOAD_DIR, pdf_filename)
@@ -287,22 +216,23 @@ try:
                     for chunk in pdf_response.iter_content(chunk_size=8192):
                         if chunk:
                             pdf_file.write(chunk)
+                
                 downloaded_parts.append("Part II")
                 print(f"  ✓ Downloaded {pdf_filename}")
             except Exception as e:
                 print(f"  ✗ Error downloading Part II: {e}")
         
-        # Update history if successful
+        # Update history
         if downloaded_parts:
             print(f"✓ Successfully downloaded {', '.join(downloaded_parts)} for Journal No. {journal_no}")
             download_history.append(journal_no)
             with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
                 json.dump(download_history, f, indent=2, ensure_ascii=False)
         else:
-             print(f"✗ No PDFs downloaded for Journal No. {journal_no}")
+            print(f"✗ No PDFs downloaded for Journal No. {journal_no}")
 
-finally:
-    print("\nClosing browser...")
-    driver.quit()
+except requests.exceptions.RequestException as e:
+    print(f"FATAL ERROR: Could not fetch webpage. {e}")
+    print("Please check your internet connection or if the website is down.")
 
 print(f"\nDownload process complete. Total journals in history: {len(download_history)}")
