@@ -31,6 +31,16 @@ for patent_text in patents:
     if app_no_match:
         patent['application_no'] = app_no_match.group(1).strip()
     
+    # Extract Date of filing of Application (22)
+    filing_date_match = re.search(r'\(22\)\s+Date of filing of Application\s*:\s*(.+?)(?=\n\(\d{2}\)|\n\n|$)', patent_text, re.DOTALL)
+    if filing_date_match:
+        patent['date_of_filing'] = re.sub(r'\s+', ' ', filing_date_match.group(1)).strip()
+    
+    # Extract Publication Date (43)
+    publication_date_match = re.search(r'\(43\)\s+Publication Date\s*:\s*(.+?)(?=\n\(\d{2}\)|\n\n|$)', patent_text, re.DOTALL)
+    if publication_date_match:
+        patent['publication_date'] = re.sub(r'\s+', ' ', publication_date_match.group(1)).strip()
+    
     # Extract Title (54)
     title_match = re.search(r'\(54\)\s+Title of the invention\s*:(.+?)(?=\(51\))', patent_text, re.DOTALL)
     if title_match:
