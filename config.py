@@ -35,10 +35,11 @@ STATUS_HTML = OUTPUT_DIR / "application_status.html"
 DOCUMENTS_HTML = OUTPUT_DIR / "view_documents.html"
 # 'data/output/real_status_page.html'
 REAL_STATUS_HTML = OUTPUT_DIR / "real_status_page.html"
-
+# --- Database Settings ---
+DATABASE_FILE = BASE_DIR / "data" / "patents.db"
 
 # --- Downloader Settings ---
-DOWNLOADER_BASE_URL = 'https.ipindia.gov.in/IPOJournal/Journal/Patent'
+DOWNLOADER_BASE_URL = 'https://search.ipindia.gov.in/IPOJournal/Journal/Patent'
 # Don't download journals older than '44/2025'
 DOWNLOADER_BASELINE_SERIAL = '44/2025'
 
