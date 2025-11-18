@@ -1,81 +1,139 @@
+
 # Patent Watch - Data Pipeline
 
-This project is a set of Python scripts that form a data pipeline to download, filter, and retrieve specific documents for Indian patent applications.
+This project is a database-driven pipeline to download, parse, classify, and retrieve documents for Indian patent applications.
 
-All scripts are run using the central `main.py` control script.
+The entire pipeline is managed by a central SQLite database (`patent_watch.db`) which acts as a "to-do list" or work queue between the different scripts. All scripts are run using the central `main.py` control script.
 
 ## Prerequisites
 
--   Python 3.x
+-   Python 3.10 or- later
     
 -   pip (Python package installer)
+    
+-   A virtual environment (`.venv`)
     
 
 ## Installation
 
-1.  Clone or download this project.
+1.  **Clone the project:**
     
-2.  Install the required Python libraries using the `requirements.txt` file:
+    ```
+    git clone [your-repo-url]
+    cd patent_watch
+    
+    ```
+    
+2.  **Create and activate a virtual environment:**
+    
+    ```
+    python3 -m venv .venv
+    source .venv/bin/activate
+    
+    ```
+    
+3.  **Install requirements:**
     
     ```
     pip install -r requirements.txt
     
     ```
     
+4.  Initialize the Database:
+    
+    This is a one-time setup. This command creates the patent_watch.db file and all the necessary tables.
+    
+    ```
+    python main.py init
+    
+    ```
+    
+5.  Run Database Migrations:
+    
+    If you have an existing database and need to add new columns (like publication_type), run this.
+    
+    ```
+    python main.py migrate
+    
+    ```
+    
 
-## How to Run
+## How to Run the Pipeline
 
-All commands must be run from the main `patent_watch/` root directory.
+All commands must be run from the root `patent_watch/` directory with your virtual environment **active** (`source .venv/bin/activate`).
 
-### To Run a Specific Step:
+### Main Pipeline Commands
 
-Use `python main.py [command]`
+These are the main steps of the pipeline, run in order.
 
--   **Download new journals:**
+1.  **Download new journals:**
     
     ```
     python main.py download
     
     ```
     
--   **Extract data from PDFs:**
+    _Finds new journals on the website and logs them as 'downloaded' in the `journals` table._
+    
+2.  **Extract data from PDFs:**
     
     ```
     python main.py extract
     
     ```
     
--   **Filter for software patents:**
+    _Finds 'downloaded' journals, parses them, and saves all patent data to the `patents` table as 'newly_extracted'._
+    
+3.  **Filter for software patents:**
     
     ```
     python main.py filter
     
     ```
     
-
-### To Run the Full Pipeline:
-
-This command will run the download, extract, and filter steps all in one go.
-
-```
-python main.py all
-
-```
-
-### To Retrieve Specific Documents:
-
-This is the "human-in-the-loop" search script. You can run it in two ways:
-
-1.  **Test Mode (uses default test data):**
+    _Finds 'newly_extracted' patents, classifies them, and updates them as 'classified'._
+    
+4.  Run the 'all' command:
+    
+    This runs download, extract, and filter in sequence.
+    
+    ```
+    python main.py all
+    
+    ```
+    
+5.  Retrieve Specific Documents:
+    
+    (Work in Progress) This will run the searcher.py worker script.
     
     ```
     python main.py search
     
     ```
     
-2.  **Live Mode (searches for a specific patent):**
+
+### Database Management Commands
+
+These commands are used for debugging and managing the pipeline's state.
+
+-   python main.py init
     
-    ```
-    python main.py search "202511087359 A"
+    (One-time setup) Creates the database and tables.
     
-    ```
+-   python main.py migrate
+    
+    (Run when schema changes) Adds new columns to the database.
+    
+-   python main.py reset [journal_id]
+    
+    Resets a journal's status back to downloaded in the journals table.
+    
+    Example: python main.py reset 44_2025
+    
+-   python main.py reset-patents
+    
+    Resets all classified patents back to newly_extracted in the patents table, so the filter can be re-run.
+    
+-   python main.py clear
+    
+    DANGER: Deletes ALL patent data from the patents table. Asks for confirmation. Used for a full reset of the extraction step.
