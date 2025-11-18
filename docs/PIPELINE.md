@@ -1,58 +1,119 @@
-- # Project Pipeline Logic & Architecture
-  
-This document explains the *why* behind the scripts.  
-- ## Part 1:  `downloader.py`  (Journal Ingestion)
-- **Objective:** Download new weekly patent journals (Parts I & II).
-- **Challenge:** The website's download links are not simple `<a>` tags. They are `<form>` submissions.
-- **Logic:**
-	- Uses `requests` (not Selenium) to fetch the raw HTML. This is very fast.
-	- Uses `BeautifulSoup` to find all download forms.
-	- Finds the correct `FileName` value from the hidden `<input>` field.
-	- Mimics a browser by sending a `POST` request with that `FileName` to the correct URL.
-	- It saves its progress in `download_history.json` to avoid re-downloading.
-- ## Part 2:  `extract.py`  &  `filter.py`  (PDF Parsing)
-- **Objective:** Extract structured data from the downloaded PDFs and identify software patents.
-- **Logic (`extract.py`):**
-	- Uses `PyMuPDF` to open each PDF and extract its raw text content.
-	- Uses a large Regular Expression (regex) to find and capture data for each patent (e.g., `(21) Application No.`, `(54) Title...`, etc.).
-	- Saves all data to `all_patents.json`.
-- **Logic (`filter.py`):**
-	- Reads `all_patents.json`.
-	- Checks the `(51) International classification` (IPC) field for each patent.
-	- **Software Patent Logic:**
-		- If the IPC list contains *only* codes like `G06`, it's "Software".
-		- If it contains *no* `G06` codes, it's "Non-Software".
-		- If it contains a *mix* (e.g., `G06` and `F02D`), it's "Hybrid".
-	- Saves the "Software" and "Hybrid" patents to `classified_patents.json`.
-- ## Part 3:  `search_requests.py`  (Document Retrieval)
-  
-  This is the most complex part of the pipeline. It uses a `requests.Session()` to navigate a series of 5+ web pages that are protected by a CAPTCHA and JavaScript redirects.  
-- **Objective:** Get the final "View Documents" page for a single patent.
-- **Model:** "Human-in-the-Loop." The script handles all network logic; the human just provides the CAPTCHA text.
-- ### The Full Request Chain
-- **`GET` (Page 1: Search Form):**
-	- Gets the search page to acquire session cookies.
-	- Finds the CAPTCHA image URL and downloads `captcha.jpg`.
-	- Pauses and waits for human input.
-- **`POST` (Page 2: Search Results):**
-	- **Challenge:** The form is complex and fails if any field is wrong.
-	- **Logic:** It constructs a *very specific* 12-field payload that was discovered by manually inspecting the browser's "Network" tab. This payload includes checkboxes, default values, and the user's CAPTCHA text.
-	- **Key Finding:** The `POST` must be sent to the `.../Search` URL, not the base URL.
-	- **Key Finding:** A `Referer` header *must* be included.
-- **`POST` (Page 3: Application Details):**
-	- Parses the "Results" page for the hidden form that links to the details.
-	- Extracts the `ConnectionName` and `ApplicationNumber` values from that form.
-	- `POST`s this new payload to the `.../PatentDetails` URL.
-- **`POST` (Page 4: The JS Redirect):**
-	- Parses the "Details" page for the "View Application Status" form.
-	- `POST`s that form's payload.
-	- **Key Finding:** The server returns a 10-line HTML page with an `onload` JavaScript command. `requests` cannot run this.
-- **`POST` (Page 5: The ****Real**** Status Page):**
-	- **The Bypass:** The script manually parses the "JS Redirect" page.
-	- It extracts the *new* hidden values (`AppNumber` and `OTP`) and the *new* `action` URL.
-	- It `POST`s this payload, successfully mimicking the JavaScript redirect and landing on the *real* status page.
-- **`POST` (Page 6: View Documents):**
-	- Parses the *real* status page for the "View Documents" form.
-	- Extracts the payload (`APPLICATION_NUMBER` and `SubmitAction`).
-	- `POST`s this final payload to get the document list.
-	- Saves the final page as `view_documents.html`.
+
+# Project Pipeline Logic & Architecture
+
+This document explains the _why_ behind the scripts. The project has been refactored from a simple file-based prototype into a robust, database-driven pipeline.
+
+## The Core Concept: A Database State Machine
+
+The entire pipeline is controlled by a central SQLite database: `data/output/patent_watch.db`.
+
+This database acts as a "to-do list" (or work queue) between scripts. The state of any piece of data is tracked by a `status` column. A script's job is to:
+
+1.  **Query** the database for items with a specific status (e.g., `status = 'downloaded'`).
+    
+2.  **Process** those items.
+    
+3.  **Update** their status to the next step (e.g., `status = 'extracted'`).
+    
+
+This makes the pipeline **resumable, robust, and scalable.**
+
+### Database Schema
+
+1.  **`journals` table:**
+    
+    -   `journal_id` (e.g., "45_2025")
+        
+    -   `part1_pdf_path`, `part2_pdf_path`
+        
+    -   `status`: (e.g., `downloaded`, `extracting`, `extracted`, `error_extracting`)
+        
+2.  **`patents` table:**
+    
+    -   `application_no` (e.g., "202511087359")
+        
+    -   `title`, `abstract`, `date_of_filing`, `publication_date`
+        
+    -   `ipc_codes` (The raw string from the PDF)
+        
+    -   `patent_type` (e.g., `Software`, `Hybrid`, `Non-Software`)
+        
+    -   `publication_type` (e.g., `PART_I_EARLY`, `PART_II_NORMAL`)
+        
+    -   `status`: (e.g., `newly_extracted`, `classified`, `retrieval_in_progress`, `documents_retrieved`)
+        
+
+## Part 1: `downloader.py` (Ingestion)
+
+-   **Objective:** Download new weekly patent journals (Parts I & II).
+    
+-   **Old Logic:** Saved history to `download_history.json`.
+    
+-   **New Logic:**
+    
+    1.  Queries the `journals` table to get a set of all `journal_id`s it has ever downloaded.
+        
+    2.  Scrapes the website.
+        
+    3.  If it finds a journal not in its database history, it downloads the PDF(s).
+        
+    4.  After a successful download, it **INSERTS** a new row into the `journals` table with the paths to the PDFs and a `status = 'downloaded'`.
+        
+
+## Part 2: `extractor.py` (Extraction)
+
+-   **Objective:** Extract structured data from all newly downloaded PDFs.
+    
+-   **Old Logic:** Read from `raw_pdfs` folder, saved all data to `all_patents.json`. This was brittle and not resumable.
+    
+-   **New Logic:**
+    
+    1.  Queries the `journals` table for all rows where `status = 'downloaded'`.
+        
+    2.  It loops through these results. For each journal:
+        
+    3.  It **UPDATE**s the journal's status to `extracting`. This "locks" the file, preventing a re-run if the script crashes.
+        
+    4.  It opens the PDF(s) (e.g., `44_2025_Part_I.pdf`) and processes them **page-by-page**.
+        
+    5.  The new, robust regex finds a patent on a page, it **INSERT**s that patent's data into the `patents` table with `status = 'newly_extracted'`.
+        
+    6.  If a page is not a patent (e.g., an index or cover), the regex fails to match, and the script simply skips it.
+        
+    7.  After both PDFs are done, it **UPDATE**s the journal's status to `extracted`.
+        
+
+## Part 3: `filter.py` (Classification)
+
+-   **Objective:** Classify all new patents as "Software," "Hybrid," or "Non-Software."
+    
+-   **Old Logic:** Read `all_patents.json`, wrote to `classified_patents.json`.
+    
+-   **New Logic:**
+    
+    1.  Queries the `patents` table for all rows where `status = 'newly_extracted'`. (This found 5,204 patents in our first run).
+        
+    2.  It loops through these results. For each patent:
+        
+    3.  It reads the `ipc_codes` string, splits it by comma (`,`), and runs the classification logic.
+        
+    4.  It **UPDATE**s the patent's row, setting the `patent_type` and changing the `status = 'classified'`.
+        
+    5.  It also stores the cleaned list of IPC codes as a JSON string back into the `ipc_codes` column for future use.
+        
+
+## Part 4: `searcher.py` (Retrieval)
+
+-   **Objective:** Run the 5-stage `requests` search for every "Software" and "Hybrid" patent to download all associated legal documents.
+    
+-   **Old Logic:** Was a single-use script for one patent.
+    
+-   **New Logic (Task 4 Plan):**
+    
+    1.  This script will be converted into a worker.
+        
+    2.  It will query the `patents` table for all rows where `status = 'classified'` AND `patent_type IN ('Software', 'Hybrid')`.
+        
+    3.  It will loop through these results, updating the status (e.g., `retrieval_in_progress`, `documents_retrieved`, `error_captcha`) as it goes.
+        
+    4.  This will make the most time-consuming part of the pipeline fully automated and resumable.
