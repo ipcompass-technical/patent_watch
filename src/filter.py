@@ -1,67 +1,86 @@
 import json
+import re
 
 # Import configuration and utilities
 import config
 from . import utils
+from . import database # Import the database module
 
 def run_filter():
     """
-    Loads all_patents.json and filters it to find software-related
-    patents, saving the result to classified_patents.json.
+    Loads all 'newly_extracted' patents from the database,
+    classifies them based on IPC codes, and updates them in place.
     """
     print("--- Running Filter ---")
     
     # Define software IPC codes
     SOFTWARE_PREFIXES = ['G06', 'H04L', 'G16H', 'G05B']
     
-    # 1. Load the master patent list
-    all_patents = utils.load_json_history(config.ALL_PATENTS_JSON)
-    if not all_patents:
-        print("Error: `all_patents.json` is empty. Run the extractor first.")
+    # 1. Load patents from DATABASE, not JSON
+    patents_to_classify = database.get_patents_to_classify()
+    
+    if not patents_to_classify:
+        print("No new patents to classify. Exiting.")
         return
 
-    print(f"Loaded {len(all_patents)} patents from master list.")
-    classified_patents = []
+    print(f"Loaded {len(patents_to_classify)} unclassified patents from database.")
+    
+    classified_counts = {
+        "Software": 0,
+        "Hybrid": 0,
+        "Non-Software": 0,
+        "Unknown": 0
+    }
     
     # 2. Loop and classify
-    for patent in all_patents:
-        ipc_string = patent.get("international_classification", "")
-        # Clean up the IPC string, split by comma or space
-        ipc_codes = [code.strip() for code in re.split(r'[,\s]+', ipc_string) if code]
+    for patent in patents_to_classify:
+        # Get data from the database row
+        ipc_string = patent["ipc_codes"] or ""
+        
+        # -----------------------------------------------------------------
+        # --- THIS IS THE BUG FIX ---
+        # -----------------------------------------------------------------
+        # We must split ONLY on commas, not on spaces.
+        # old: ipc_codes = [code.strip() for code in re.split(r'[,\s]+', ipc_string) if code]
+        ipc_codes_raw = ipc_string.split(',')
+        ipc_codes = [code.strip() for code in ipc_codes_raw if code.strip()]
+        # -----------------------------------------------------------------
         
         if not ipc_codes:
-            patent['patent_type'] = 'Unknown'
-            continue
-
-        software_count = 0
-        other_count = 0
-        
-        for code in ipc_codes:
-            if any(code.startswith(prefix) for prefix in SOFTWARE_PREFIXES):
-                software_count += 1
-            else:
-                other_count += 1
-        
-        # 3. Assign type
-        if software_count > 0 and other_count > 0:
-            patent['patent_type'] = 'Hybrid'
-        elif software_count > 0 and other_count == 0:
-            patent['patent_type'] = 'Software'
+            patent_type = 'Unknown'
         else:
-            patent['patent_type'] = 'Non-Software'
+            software_count = 0
+            other_count = 0
             
-        patent['ipc_codes'] = ipc_codes
+            for code in ipc_codes:
+                if any(code.startswith(prefix) for prefix in SOFTWARE_PREFIXES):
+                    software_count += 1
+                else:
+                    other_count += 1
+            
+            # 3. Assign type
+            if software_count > 0 and other_count > 0:
+                patent_type = 'Hybrid'
+            elif software_count > 0 and other_count == 0:
+                patent_type = 'Software'
+            else:
+                patent_type = 'Non-Software'
         
-        # Only save software-related patents
-        if patent['patent_type'] in ['Software', 'Hybrid']:
-            classified_patents.append(patent)
+        # 4. Update the database
+        app_no = patent["application_no"]
+        database.update_patent_classification(app_no, patent_type, ipc_codes)
+        
+        # Update our local counter
+        classified_counts[patent_type] += 1
 
-    # 4. Save results
-    print(f"Filtering complete. Found {len(classified_patents)} software/hybrid patents.")
-    utils.save_json_history(config.CLASSIFIED_PATENTS_JSON, classified_patents)
-    print(f"Classified patents saved to {config.CLASSIFIED_PATENTS_JSON}")
+    # 5. Print summary
+    print("\n--- Filtering complete ---")
+    print(f"  ✓ Classified {classified_counts['Software']} as 'Software'")
+    print(f"  ✓ Classified {classified_counts['Hybrid']} as 'Hybrid'")
+    print(f"  ✓ Classified {classified_counts['Non-Software']} as 'Non-Software'")
+    print(f"  ✓ Classified {classified_counts['Unknown']} as 'Unknown'")
+    print(f"Total patents updated in database: {len(patents_to_classify)}")
 
 if __name__ == '__main__':
-    # Need to import 're' for standalone execution
-    import re
+    # This check is still useful for direct testing
     run_filter()

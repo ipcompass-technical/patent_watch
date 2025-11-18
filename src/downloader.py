@@ -37,11 +37,6 @@ def run_downloader():
         )
         response.raise_for_status()
 
-        debug_path = config.OUTPUT_DIR / "debug_page.html"
-        with open(debug_path, 'w', encoding='utf-8') as f:
-            f.write(response.text)
-        print(f"DEBUG: Saved raw HTML to {debug_path}")
-        
     except requests.RequestException as e:
         print(f"Error: Could not fetch webpage. {e}")
         return

@@ -12,7 +12,7 @@
 # -----------------------------------------------------------------
 
 import sys
-# Add this import
+# Make sure all modules are imported
 from src import database, downloader, extractor, filter, searcher
 
 def main():
@@ -51,14 +51,38 @@ def main():
         extractor.run_extractor()
         filter.run_filter()
         print("\nFull pipeline complete.")
-
+        
     elif command == 'init':
         print("--- Initializing Database ---")
-        # Check the return value
         if database.create_tables():
             print("\nDatabase initialized successfully.")
         else:
             print("\nDatabase initialization FAILED.")
+
+    elif command == 'migrate':
+        print("--- Running Database Migrations ---")
+        database.add_publication_type_column()
+        print("Migration complete.")
+
+    elif command == 'reset':
+        if len(sys.argv) < 3:
+            print("Error: Please provide a journal_id to reset.")
+            print("Usage: python main.py reset [journal_id]")
+            print("Example: python main.py reset 44_2025")
+            return
+        
+        journal_id_to_reset = sys.argv[2]
+        database.reset_journal_status(journal_id_to_reset)
+    
+    elif command == 'clear':
+        print("--- Clearing 'patents' table ---")
+        database.clear_patents_table()
+    
+    # --- NEW COMMAND BLOCK ---
+    elif command == 'reset-patents':
+        print("--- Resetting patent classification status ---")
+        database.reset_patents_to_newly_extracted()
+    # --- END NEW COMMAND BLOCK ---
         
     else:
         print(f"Unknown command: '{command}'")
@@ -75,7 +99,14 @@ def print_help():
     print("                 specific application number (e.g., '202511087359 A')")
     print("                 (If no app number is given, runs in test mode).")
     print("  all         - Run the full download, extract, and filter pipeline.")
-    print("  init        - Initialize the database.")
+    print("  init        - Initialize the SQLite database and create tables.")
+    print("  migrate     - Run any new database schema upgrades.")
+    print("  reset [id]  - Reset a journal's status to 'downloaded'")
+    print("                (e.g., python main.py reset 44_2025)")
+    print("  clear       - Deletes ALL patents from the 'patents' table.")
+    # --- NEW HELP TEXT ---
+    print("  reset-patents - Resets all 'classified' patents back to 'newly_extracted'.")
+
 
 if __name__ == "__main__":
     main()
